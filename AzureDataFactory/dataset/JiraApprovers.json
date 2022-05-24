@@ -1,0 +1,75 @@
+{
+	"name": "JiraApprovers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Jira",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "__hevo_ref_id",
+				"type": "varchar"
+			},
+			{
+				"name": "__hevo_array_index",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "self",
+				"type": "varchar"
+			},
+			{
+				"name": "accountid",
+				"type": "varchar"
+			},
+			{
+				"name": "emailaddress",
+				"type": "varchar"
+			},
+			{
+				"name": "avatarurls_48x48",
+				"type": "varchar"
+			},
+			{
+				"name": "avatarurls_24x24",
+				"type": "varchar"
+			},
+			{
+				"name": "avatarurls_16x16",
+				"type": "varchar"
+			},
+			{
+				"name": "avatarurls_32x32",
+				"type": "varchar"
+			},
+			{
+				"name": "displayname",
+				"type": "varchar"
+			},
+			{
+				"name": "active",
+				"type": "bit"
+			},
+			{
+				"name": "timezone",
+				"type": "varchar"
+			},
+			{
+				"name": "accounttype",
+				"type": "varchar"
+			},
+			{
+				"name": "__hevo__ingested_at",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "jira_issue_custom_approvers"
+		}
+	}
+}
