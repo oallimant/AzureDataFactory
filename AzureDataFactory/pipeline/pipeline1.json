@@ -24,11 +24,22 @@
 							"supportRFC5988": "true"
 						}
 					},
+					"sink": {
+						"type": "AzureTableSink",
+						"azureTableInsertType": "merge",
+						"writeBatchSize": 10000
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "RestResource1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureTable1",
 						"type": "DatasetReference"
 					}
 				]
