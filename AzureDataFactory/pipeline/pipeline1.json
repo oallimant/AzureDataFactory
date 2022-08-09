@@ -29,7 +29,44 @@
 						"azureTableInsertType": "merge",
 						"writeBatchSize": 10000
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['results'][0]['name']"
+								},
+								"sink": {
+									"name": "name"
+								}
+							},
+							{
+								"source": {
+									"path": "$['results'][0]['height']"
+								},
+								"sink": {
+									"name": "height"
+								}
+							},
+							{
+								"source": {
+									"path": "$['results'][0]['mass']"
+								},
+								"sink": {
+									"name": "mass"
+								}
+							},
+							{
+								"source": {
+									"path": "$['results'][0]['homeworld']"
+								},
+								"sink": {
+									"name": "homeworld"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
